@@ -6,6 +6,9 @@
 body, html {
   height: 100%;
 }
+button {
+  cursor: pointer;
+}
 @font-face {
   font-family: Netflix Sans;
   src: url(https://occ.a.nflxso.net/genc/hawkins/5.4.0/font/netflix-sans-core-variable-full.woff2);
@@ -40,7 +43,7 @@ body, html {
   border: 2px solid black;
 }
 */
-button {
+.login {
   background-color: #e50914;
   color: white;
   border: none;
@@ -80,7 +83,7 @@ button {
   text-align: center;
 }
 
-.hero-text h3 {
+.hero-text h2 {
   color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 400;
@@ -90,8 +93,36 @@ button {
   font-size: 20px;
   font-weight: 500;
 }
+.hero-form{
+  flex-direction: row;
+  align-items: flex-start;
+}
+.hero-form input{
+  background-color: transparent;
+  border: 1px solid #767676;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  border-radius: 4px;
+  outline: none;
+  padding: 24px 16px 8px;
+}
+.hero-form button{
+  border: none;
+  background-color: #e50914;
+  color: white;
+  border-radius: 4px;
+  flex: 1;
 
 
-li {
-  display: inline-block;
+}
+
+.hero-form button:hover{
+  opacity: 0.8;
+  transition-duration: 0.4s;
+}
+
+  li {
+  border-radius: 4px;  display: inline-block;
+
 }
