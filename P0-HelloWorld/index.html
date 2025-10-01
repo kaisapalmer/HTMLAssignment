@@ -24,23 +24,46 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
+<!-- Add your site or application content here -->
 
 <div class="hero-image">
   <div class="navbar">
     <div class="navbar-logo">
       <img src="img/logo.png" alt="Logo" height="40"/></div>
     <div class="navbar-items">
-      <ul>
-        <li>
-          <select id="language" onchange="changeLanguage(this.value)">
-            <option value="sv">Svenska</option>
-            <option value="en">English</option>
-          </select>
-        </li>
-        <li><button type="button" class="login">Logga in</button></li>
-     </ul>
-   </div>
+        <div>
+          <!-- <div class="select-wrapper">
+             <select class="language" onchange="changeLanguage(this.value)">
+               <option value="sv">Svenska</option>
+               <option value="en">English</option>
+             </select>
+           </div>-->
+
+          <div class="language-wrapper">
+            <svg class="globe" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="white" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10
+    4.477 10 10-4.477 10-10 10zm0-2c4.418 0 8-3.582
+    8-8 0-1.05-.206-2.052-.58-2.963l-2.258 2.258-1.414-1.414L18
+    7.636A7.963 7.963 0 0012 4a7.963 7.963 0 00-6
+    2.636l2.252 2.252-1.414 1.414L4.58 9.037A7.963 7.963 0 004
+    12c0 4.418 3.582 8 8 8z"/>
+            </svg>
+
+            <select class="language">
+              <option value="sv">Svenska</option>
+              <option value="en">English</option>
+              <option value="de">Deutsch</option>
+            </select>
+
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+              <polygon fill="white" points="0,0 14,0 7,8"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="login">Logga in</button>
+        </div>
+    </div>
   </div>
   <div class="hero-text">
     <h1>Obegränsat med filmer, serier och annat</h1>

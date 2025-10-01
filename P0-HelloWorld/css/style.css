@@ -1,18 +1,22 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
 }
+
 body, html {
   height: 100%;
 }
+
 button {
   cursor: pointer;
 }
+
 @font-face {
   font-family: Netflix Sans;
   src: url(https://occ.a.nflxso.net/genc/hawkins/5.4.0/font/netflix-sans-core-variable-full.woff2);
 }
+
 .hero-image {
   /*
 
@@ -22,6 +26,8 @@ button {
   background-image: linear-gradient(7deg, rgba(0, 0, 0, 0.8500) 10.00%, rgba(0, 0, 0, 0.8465) 17.25%, rgba(0, 0, 0, 0.8361) 24.50%, rgba(0, 0, 0, 0.8187) 31.75%, rgba(0, 0, 0, 0.7944) 39.00%, rgba(0, 0, 0, 0.7632) 46.25%, rgba(0, 0, 0, 0.7250) 53.50%, rgba(0, 0, 0, 0.6868) 60.75%, rgba(0, 0, 0, 0.6556) 68.00%, rgba(0, 0, 0, 0.6312) 75.25%, rgba(0, 0, 0, 0.6139) 82.50%, rgba(0, 0, 0, 0.6035) 89.75%, rgba(0, 0, 0, 0.6000) 97.00%), url("https://assets.nflxext.com/ffe/siteui/vlv3/bebd95d0-65f9-41a9-9d12-4794db63653e/web/SE-sv-20250922-TRIFECTA-perspective_d5394f79-9d72-482a-a220-a322cbd85c43_large.jpg");
   height: 100%;
   padding: 0 9.25rem;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .navbar {
@@ -33,10 +39,14 @@ button {
 .navbar-logo {
   margin-top: 1.5rem;
 }
+
 .navbar-items {
+  display: flex;
+  justify-content: stretch;
   margin-top: 1.66rem;
   margin-right: 0.13rem;
 }
+
 /*
 .navbar div {
   background-color: red;
@@ -50,12 +60,74 @@ button {
   margin-left: 0.5rem;
   border-radius: 0.25rem;
   width: 5.53rem;
-  height: 2rem;
+  height: 2.1rem;
   font-weight: 500;
   font-size: 0.88rem;
 }
 
-#language {
+.language-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem; /* space between globe, text, and arrow */
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* remove native select arrow */
+.language {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding-right: 0; /* no extra padding */
+}
+
+.language:focus {
+  outline: none;
+}
+
+.globe {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.arrow {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+/*.language {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 24px 8px 36px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='white'><polygon points='0,0 14,0 7,8'/></svg>"), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2c4.418 0 8-3.582 8-8 0-1.05-.206-2.052-.58-2.963l-2.258 2.258-1.414-1.414L18 7.636A7.963 7.963 0 0012 4a7.963 7.963 0 00-6 2.636l2.252 2.252-1.414 1.414L4.58 9.037A7.963 7.963 0 004 12c0 4.418 3.582 8 8 8z"/></svg>');
+
+  background-position: right 4px center, 8px center;
+  background-size: 8px, 18px;
+}
+*/
+
+/*
+.language {
   width: 8.22rem;
   height: 2rem;
   text-align: center;
@@ -64,19 +136,16 @@ button {
   font-weight: 400;
   font-size: 1rem;
   border-radius: 0.25rem;
-  /*
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 34px;
-  padding-right: 36px;
-  border-radius: 3px;
-   */
 }
+ */
 
 .hero-text {
   color: white;
   text-align: center;
+  margin: 0 18rem;
+  margin-top: 23vh;
 }
+
 .hero-text h1 {
   font-size: 3.5rem;
   font-weight: 900;
@@ -89,15 +158,18 @@ button {
   font-weight: 400;
   line-height: 1.5;
 }
+
 .hero-text p {
   font-size: 1.25rem;
   font-weight: 500;
 }
-.hero-form{
+
+.hero-form {
   flex-direction: row;
   align-items: flex-start;
 }
-.hero-form input{
+
+.hero-form input {
   background-color: transparent;
   border: 0.06rem solid #767676;
   font-size: 1rem;
@@ -107,7 +179,8 @@ button {
   outline: none;
   padding: 1.5rem 1rem 0.5rem;
 }
-.hero-form button{
+
+.hero-form button {
   border: none;
   background-color: #e50914;
   color: white;
@@ -117,12 +190,13 @@ button {
 
 }
 
-.hero-form button:hover{
+.hero-form button:hover {
   opacity: 0.8;
   transition-duration: 0.4s;
 }
 
-  li {
-  border-radius: 0.25rem;  display: inline-block;
+li {
+  border-radius: 0.25rem;
+  display: inline-block;
 
 }
